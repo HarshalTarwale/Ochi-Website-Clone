@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+/* Neue Montreal font declaration */
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('../fonts/NeueMontreal-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility class to apply the font */
+.font-neue {
+  font-family: 'NeueMontreal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Founders Grotesk font declaration */
+@font-face {
+  font-family: 'FoundersGrotesk';
+  src: url('../fonts/FoundersGrotesk-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility class to apply Founders Grotesk */
+.font-founders {
+  font-family: 'FoundersGrotesk', 'NeueMontreal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
