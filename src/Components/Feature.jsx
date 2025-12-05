@@ -7,6 +7,7 @@ const Feature = () => {
         <h1 className='text-[7.5vh]'>Featured projects</h1>
       </div>
       <div className='border-t-[0.5px] mt-[4vh] border-zinc-400'></div>
+      <div className='card-container w-full'></div>
 
     </div>
   )
