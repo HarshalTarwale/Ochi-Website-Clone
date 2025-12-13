@@ -1,4 +1,5 @@
 import React from "react";
+import Button2 from './Button2';
 
 const About = () => {
   return (
@@ -29,7 +30,7 @@ const About = () => {
       <div className="flex justify-between">
         <div className="left text-black">
           <h1 className="text-[6vh]">How we can help:</h1>
-          <button className="uppercase text-white mt-2.5 bg-black rounded-[25px] px-[2.3vh] py-[1.7vh] flex items-center">Read more <div className=" ml-[2vw] h-[10px] w-[10px] bg-white rounded-[50%]"></div> </button>
+          <Button2 text="read more" />
         </div>
         <img className="h-[60vh] w-auto rounded-[15px] mt-4" src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-1326x939.jpg" alt="" />
       </div>
