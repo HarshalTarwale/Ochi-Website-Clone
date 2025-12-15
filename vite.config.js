@@ -5,4 +5,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  base: '/Ochi/', // GitHub repository name - change this to match your repo name
 })
