@@ -7,11 +7,13 @@ import { IoMdArrowUp } from "react-icons/io";
 
 const Feature = () => {
   return (
-    <div className="w-full py-20 bg-zinc-800">
+    // relative z-10 ensures this section appears above the sticky Eyes section (z-0)
+    // This continues to scroll over Eyes after About has passed
+    <div className="w-full py-20 bg-white relative z-10 rounded-tl-[25px] rounded-tr-[25px]">
       <div className="px-15">
-        <h1 className="text-[7.5vh]">Featured projects</h1>
+        <h1 className="text-[7.5vh] text-black">Featured projects</h1>
       </div>
-      <div className="border-t-[0.5px] mt-[4vh] border-zinc-400"></div>
+      <div className="border-t-[0.5px] mt-[4vh] border-gray-300"></div>
       <div className="cards w-full flex gap-[20px] px-16 mt-[60px]">
         {/* Left Card */}
         <Card 

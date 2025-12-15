@@ -12,8 +12,8 @@ const Card = ({
     <div className="card-container w-1/2 relative z-[1] hover:z-[10]">
       {/* Heading with dot */}
       <div className="heading flex gap-[10px] items-center mb-2.5 ">
-        <div className="rounded-[50%] h-[14px] w-[14px] bg-white"></div>
-        <h3 className="text-[16px] uppercase">{heading}</h3>
+        <div className="rounded-[50%] h-[14px] w-[14px] bg-black"></div>
+        <h3 className="text-[16px] uppercase text-black">{heading}</h3>
       </div>
       
       {/* Card with image and hover text - scales down on hover */}

@@ -12,6 +12,7 @@ const Eyes = () => {
   // Refs to get the actual position of each eye element
   const leftEyeRef = useRef(null);
   const rightEyeRef = useRef(null);
+  const eyesSectionRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -72,7 +73,9 @@ const Eyes = () => {
   }, []);
 
   return (
-    <div className='eyes h-screen w-full overflow-hidden'>
+    // Fixed positioning keeps this section always fixed to the viewport window
+    // z-0 ensures it stays behind other sections that scroll over it
+    <div className='eyes h-screen w-full overflow-hidden fixed top-0 left-0 z-0'>
       <div className='relative w-full h-full bg-cover bg-center bg-[url("/Eyes-sec-bg.jpg")]'>
         <div className='absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] flex gap-10'>
             {/* LEFT EYE - tracks cursor independently using leftEyeRef for position */}

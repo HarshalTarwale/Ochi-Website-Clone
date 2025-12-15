@@ -1,29 +1,51 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { IoMdArrowUp } from "react-icons/io";
+import { FaYoutube, FaInstagram, FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6";
 
-const Landing = () => {
+const Footer = () => {
   return (
-    <div className="w-full h-screen z-[10] relative bg-white pt-1 text-black">
-      <div className="headind-container mt-38 px-15 ">
-        {["We create", "eye-opening", "presentations"].map((item, index) => {
-          return (
-            <div className="masker">
-              <div className="w-fit flex items-center">
-                {index === 1 && (
-                  <motion.div
-                    initial={{ width: "0" }}
-                    animate={{ width: "9.5vw" }}
-                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                    className="w-[9.5vw] h-[6vw] bg-[#004D43] mt-[1.6vh] rounded-[10px] flex justify-center items-center mr-[2vh]"
-                  >
-                    <svg
+    // Sticky positioning makes this section stick at top when scrolled into view
+    // h-screen ensures full viewport height for full page slide effect
+    // z-30 ensures it appears above Contact (z-20) and Rating (z-10)
+    <div className="sticky top-0 w-full bg-[#F1F1F1] rounded-tl-[25px] rounded-tr-[25px] py-20 px-15 z-30">
+      <div className="flex">
+        <div className="left w-1/2">
+          <h1 className="uppercase text-black font-founders text-[17vh] leading-[13vh]">
+            Eye- <br />
+            opening
+          </h1>
+        </div>
+        <div className="right w-1/2">
+          <h1 className="uppercase text-black font-founders text-[17vh] leading-[13vh]">
+            presentations
+          </h1>
+          <div className="icons flex gap-9 mt-[5vh] ml-[2vw]">
+            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+              <FaYoutube className="text-white text-5xl" />
+            </div>
+            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+              <FaInstagram className="text-white text-5xl" />
+            </div>
+            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+              <FaXTwitter className="text-white text-5xl" />
+            </div>
+            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+              <FaFacebook className="text-white text-5xl" />
+            </div>
+            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+              <FaLinkedin className="text-white text-5xl" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex mt-[14vh]">
+          <div className="left w-1/2">
+             <svg
                       width="67"
                       height="25"
                       viewBox="0 0 72 30"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="text-[#CDEA68]"
+                      className="text-black"
                     >
                       <path
                         d="M9.8393 10.2032C4.22951 10.3257 -0.0459221 14.7356 0.000372391 20.2752C0.0412204 25.3548 4.57808 30.3608 10.6862 29.9226C15.5145 29.5768 19.9015 25.4119 19.8525 20.0057C19.8035 14.5995 15.1904 10.0916 9.8393 10.2032ZM9.89649 25.7005C6.87101 25.7005 4.39834 23.1144 4.40924 19.9839C4.39525 19.2507 4.52792 18.522 4.79947 17.8407C5.07102 17.1594 5.47597 16.5392 5.99056 16.0164C6.50515 15.4937 7.11902 15.0789 7.79613 14.7966C8.47324 14.5142 9.19995 14.3698 9.93362 14.372C10.6673 14.3742 11.3931 14.5228 12.0686 14.8092C12.744 15.0956 13.3554 15.514 13.8668 16.0398C14.3783 16.5656 14.7796 17.1882 15.0471 17.8711C15.3146 18.554 15.4429 19.2834 15.4246 20.0166C15.4409 23.1008 12.9111 25.7059 9.88832 25.7005H9.89649Z"
@@ -46,32 +68,14 @@ const Landing = () => {
                         fill="currentColor"
                       ></path>
                     </svg>
-                  </motion.div>
-                )}
-                <h1 className="uppercase text-[9vw] leading-[7vw] font-founders text-black">
-                  {item}
-                </h1>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      <div className="border-t-[2px] border-gray-300 mt-42 px-15">
-        <div className="p1-footer flex justify-between mt-[2vh] text-[2.2vh] text-black">
-          <h1>Presentation and storytelling agency</h1>
-          <h1 className="ml-[10vw]">For innovation teams and global brands</h1>
-          <div className="p1-btn flex gap-1.5 items-center items-center">
-            <button className="start border border-black rounded-[25px] px-[1.7vh] py-[0.4vh] flex items-centern uppercase text-[2vh] text-black hover:bg-black hover:text-white transition-all duration-300">
-              Start the project
-            </button>
-            <div className="start-circle h-8 w-8 border border-black rounded-[50%] flex items-center justify-center rotate-[45deg] text-[22px] text-black hover:bg-black hover:text-white transition-all duration-300">
-              <IoMdArrowUp />
-            </div>
+          </div>
+          <div className="flex gap-25 w-1/2 justify-between">
+            <h3 className="text-zinc-500">© ochi design 2025. Legal Terms</h3>
+            <h3 className="text-zinc-500">Website by Obys</h3>
           </div>
         </div>
-      </div>
     </div>
   );
 };
 
-export default Landing;
+export default Footer;

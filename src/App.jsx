@@ -7,6 +7,8 @@ import About from './Components/About';
 import Eyes from './Components/Eyes';
 import Feature from './Components/Feature';
 import Rating from './Components/Rating';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 const App = () => {
   useEffect(() => {
@@ -36,7 +38,13 @@ const App = () => {
       <About/>
       <Eyes/>
       <Feature/>
-      <Rating/>
+      {/* Relative container allows sticky children to stack as cards */}
+      <div className='relative'>
+        <Rating/>
+        <Contact/>
+        <Footer/>
+      </div>
+
     </div>
   )
 }

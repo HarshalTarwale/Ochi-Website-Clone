@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button2 from './Button2';
 
+// Register GSAP ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    const element = aboutRef.current;
+    
+    // Animate About section from bottom (100vh) to its normal position (0)
+    // Animation triggers when scrolling to the BOTTOM of About section
+    // This reveals Eyes page behind as About scrolls away
+    gsap.fromTo(element,
+      { y: 0 }, // Start position: normal position
+      {
+        y: '-100vh', // End position: move up and out of view
+        scrollTrigger: {
+          trigger: element, // Animation triggers when this element is in view
+          start: 'top-[98%]', // Start when bottom of element hits bottom of viewport
+          end: 'bottom top', // End when bottom of element reaches top of viewport
+          scrub: 1, // Smooth animation tied to scroll progress
+        }
+      }
+    );
+  }, []);
+
   return (
-    <div className="w-full py-25 pb-15 px-12 bg-[#CDEA68] rounded-tl-[25px] rounded-tr-[25px]">
+    // relative z-10 ensures this section appears above the sticky Eyes section (z-0)
+    // As you scroll down, this will slide up from bottom and cover the Eyes section
+    // ref allows GSAP to animate this element
+    <div ref={aboutRef} className="w-full py-25 pb-15 px-12 bg-[#CDEA68] rounded-tl-[25px] rounded-tr-[25px] relative z-[12]">
       <h1 className="text-black text-[3.4vw] leading-none w-[90%] ">
         We craft category-defining presentations, brand identities, and digital
         experiences that drive funding, sales, and market leadership.

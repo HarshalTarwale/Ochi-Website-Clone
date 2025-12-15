@@ -17,7 +17,7 @@ const Button2 = ({
     <Component
       href={href}
       onClick={onClick}
-      className={`button2 uppercase ${textColor} mt-2.5 ${bgColor} rounded-[36px] pr-[0.9vh] pl-[2.9vh] py-[0.9vh] flex items-center group/btn2 ${className}`}
+      className={`button2 uppercase ${textColor} mt-2.5 ${bgColor} rounded-[36px] pr-[0.9vh] pl-[2.9vh] py-[0.9vh] flex items-center group/btn2 border border-black  ${className}`}
     >
       {text}
       <div className="outer-dot ml-[0.9vw] flex justify-center items-center h-[40px] w-[40px] bg-transparent rounded-[50%] relative overflow-hidden">
