@@ -18,20 +18,20 @@ const Footer = () => {
           <h1 className="uppercase text-black font-founders text-[17vh] leading-[13vh]">
             presentations
           </h1>
-          <div className="icons flex gap-9 mt-[5vh] ml-[2vw]">
-            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+          <div className="icons flex gap-9 mt-[3.3vh] ml-[3.4vw]">
+            <div className="icon-container h-[10vh] w-[10vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-106 transition-transform duration-400 cursor-pointer">
               <FaYoutube className="text-white text-5xl" />
             </div>
-            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+            <div className="icon-container h-[10vh] w-[10vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-106 transition-transform duration-200 cursor-pointer">
               <FaInstagram className="text-white text-5xl" />
             </div>
-            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+            <div className="icon-container h-[10vh] w-[10vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-106 transition-transform duration-200 cursor-pointer">
               <FaXTwitter className="text-white text-5xl" />
             </div>
-            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+            <div className="icon-container h-[10vh] w-[10vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-106 transition-transform duration-200 cursor-pointer">
               <FaFacebook className="text-white text-5xl" />
             </div>
-            <div className="icon-container h-[11vh] w-[11vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-90 transition-transform duration-200 cursor-pointer">
+            <div className="icon-container h-[10vh] w-[10vh] bg-black flex justify-center items-center p-1.5 rounded-[25px] hover:scale-106 transition-transform duration-200 cursor-pointer">
               <FaLinkedin className="text-white text-5xl" />
             </div>
           </div>

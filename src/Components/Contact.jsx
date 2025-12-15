@@ -111,8 +111,6 @@ const Contact = () => {
 
       <div className='flex flex-col items-center gap-[17px]'>
         <Button2 text="start the project"/>
-        <h3 className='uppercase text-black '>or</h3>
-        <Button2 text="hello@ochi.design"/>
       </div>
     </div>
   )
